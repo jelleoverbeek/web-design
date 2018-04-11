@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>checkmark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-3" transform="translate(-488.000000, -409.000000)" fill="#FFFFFF">
+            <g id="checkmark" transform="translate(488.000000, 409.000000)">
+                <path d="M20,40 C8.954305,40 0,31.045695 0,20 C0,8.954305 8.954305,0 20,0 C31.045695,0 40,8.954305 40,20 C40,31.045695 31.045695,40 20,40 Z M26.1221153,12.5563571 L18.5836159,24.3909322 L14.2214006,20.4464703 C13.4021075,19.7056379 12.1373759,19.7692429 11.3965435,20.5885359 C10.6557111,21.407829 10.7193161,22.6725606 11.5386092,23.413393 L17.6570174,28.9458637 C18.5754048,29.7763005 20.0200504,29.5812034 20.6852578,28.5369046 L29.4958046,14.7053616 C30.0892358,13.773743 29.8150808,12.5374459 28.8834622,11.9440147 C27.9518436,11.3505835 26.7155465,11.6247385 26.1221153,12.5563571 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
