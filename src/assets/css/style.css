@@ -85,7 +85,7 @@ article img {
 }
 
 .poster:hover {
-    transform: scale(1.013);
+    transform: scale(1.015);
 }
 
 .poster::after {
@@ -103,14 +103,14 @@ article img {
     transition: opacity ease-in-out 0.1s;
 }
 
-.poster:hover::after {
+.article:hover .poster::after {
     opacity: 0.4;
 }
 
-.poster.active {
-    transform: scale(0.9);
+.active .poster {
+    transform: scale(0.97);
 }
 
-.poster.active::after {
+.active .poster::after {
     opacity: 1;
 }
