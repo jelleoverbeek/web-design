@@ -103,8 +103,8 @@ article img {
     transition: opacity ease-in-out 0.1s;
 }
 
-.article:hover .poster::after {
-    opacity: 0.4;
+.poster:hover::after {
+    opacity: 0.5;
 }
 
 .active .poster {

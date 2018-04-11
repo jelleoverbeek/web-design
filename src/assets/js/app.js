@@ -9,8 +9,6 @@
             const _this = this;
 
             this.elements.forEach(function (article) {
-                console.log(article)
-
                 article.addEventListener("click", function (ev) {
                     _this.toggle(this)
                 })
