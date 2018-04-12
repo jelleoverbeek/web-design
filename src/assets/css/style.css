@@ -9,6 +9,15 @@
     --border-radius: .1875rem;
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -140,7 +149,13 @@ article img {
     opacity: 1;
 }
 
-.active .btn-refresh {
+.btn-refresh.loading {
     background: #DAEBEF;
     transform: scale(0.97);
+}
+
+.btn-refresh.loading .refresh-icon {
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
 }
