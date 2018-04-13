@@ -3,16 +3,19 @@
     const api = {
         uri: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=" + config.TMDb_apikey + "",
         getMovies: function () {
-            // Source: https://developers.google.com/web/updates/2015/03/introduction-to-fetch
-            fetch(this.uri).then(function(response) {
-                response.json().then(function(data) {
-                    console.log(data);
-                    movies.setMovies(data);
-                    movies.refreshFinished();
+            if(config.TMDb_apikey) {
+                fetch(this.uri).then(function(response) {
+                    response.json().then(function(data) {
+                        console.log(data);
+                        movies.setMovies(data);
+                        movies.refreshFinished();
+                    });
+                }).catch(function(err) {
+                    console.log('Fetch Error', err);
                 });
-            }).catch(function(err) {
-                console.log('Fetch Error', err);
-            });
+            } else {
+                console.log("No api key detected")
+            }
         }
     };
 
