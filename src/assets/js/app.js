@@ -1,22 +1,22 @@
 (function () {
 
     const api = {
-        uri: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=" + config.TMDb_apikey + "",
-        getMovies: function () {
-            if(config.TMDb_apikey) {
-                fetch(this.uri).then(function(response) {
-                    response.json().then(function(data) {
-                        console.log(data);
-                        movies.setMovies(data);
-                        movies.refreshFinished();
-                    });
-                }).catch(function(err) {
-                    console.log('Fetch Error', err);
-                });
-            } else {
-                console.log("No api key detected")
-            }
-        }
+        // uri: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=" + config.TMDb_apikey + "",
+        // getMovies: function () {
+        //     if(config.TMDb_apikey) {
+        //         fetch(this.uri).then(function(response) {
+        //             response.json().then(function(data) {
+        //                 console.log(data);
+        //                 movies.setMovies(data);
+        //                 movies.refreshFinished();
+        //             });
+        //         }).catch(function(err) {
+        //             console.log('Fetch Error', err);
+        //         });
+        //     } else {
+        //         console.log("No api key detected")
+        //     }
+        // }
     };
 
     const movies = {
@@ -63,7 +63,7 @@
         },
         refresh: function (el) {
             el.classList.add("loading");
-            api.getMovies();
+            // api.getMovies();
         },
         init: function () {
             const _this = this;
