@@ -24,7 +24,7 @@ h1 {
 h2 {
     font-size: rem(28);
     font-weight: 600;
-    margin-top: rem(32);
+    margin: 0;
 }
 
 h3 {
@@ -34,6 +34,9 @@ h3 {
 
 h4 {
     font-size: rem(22);
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.55;
 }
 
 p {
@@ -55,6 +58,10 @@ p {
 h2, h3, h4, h5, h6 {
     margin-bottom: rem(0);
 
+    time {
+        font-weight: 400;
+    }
+
     & + p, & + ul, & + ol {
         margin-top: rem(8);
     }
@@ -71,11 +78,13 @@ ul, ol {
 
 a {
     text-decoration: none;
+    font-weight: 500;
 
     @include transition(0.1s, color);
 
     &:hover,
     &:focus {
+        text-decoration: underline;
     }
 
     &.active,
@@ -84,7 +93,7 @@ a {
 }
 
 section {
-    width: rem(1024);
+    max-width: rem(672);
     margin: 0 auto;
 }
 
