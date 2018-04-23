@@ -79,6 +79,7 @@ ul, ol {
 a {
     text-decoration: none;
     font-weight: 500;
+    color: $brand-primary;
 
     @include transition(0.1s, color);
 
