@@ -114,3 +114,4 @@ typings/
 .next
 
 /src/assets/js/config.js
+/build/
