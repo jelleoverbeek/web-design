@@ -42,7 +42,7 @@ gulp.task('twig', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./src/assets/**/*', ['default']);
+    gulp.watch('./src/**/*', ['default']);
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'twig']);
