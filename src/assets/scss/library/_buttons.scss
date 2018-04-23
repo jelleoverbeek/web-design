@@ -8,7 +8,6 @@ button {
 
     &:hover {
         transform: scale(1.08);
-        //box-shadow: 0 2px 8px 0 rgba(0,0,0,0.13);
         background: darken($brand-primary, 5%);
     }
 
@@ -21,4 +20,6 @@ button {
     padding: 0;
     width: rem(48);
     height: rem(48);
+
+    //box-shadow: 0 0 0 4px rgba(68,91,237,0.25), 0 0 0 8px rgba(68,91,237,0.12);
 }
