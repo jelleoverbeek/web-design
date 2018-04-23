@@ -2,6 +2,52 @@
 
 {% block content %}
 
-    <header></header>
+    <section>
+        <header>
+            <h1>Meldingen</h1>
+            <a href="#">Notificaties inschakelen</a>
+        </header>
+
+        <article>
+            <span>Joost</span>
+            <p><a href="#">#meldingen</a> Het programma voor morgen is gewijzigd ! Sorry daarvoor. Onze _echte mensen_ komen om 1530.</p>
+        </article>
+    </section>
+
+    <section class="section-timeline">
+        <h1>Tijdlijn</h1>
+
+        <div class="timeline">
+            <article class="timeline-item">
+                <div class="timeline-shape">
+                    <button>^</button>
+                </div>
+            </article>
+            <article class="timeline-item">
+                <div class="timeline-shape"></div>
+                <div class="timeline-item-content">
+                    <h3>Vandaag <time>(23 april 2018)</time></h3>
+                    <div class="card">
+                        <header>
+                            <div class="titles">
+                                <h2>Webdesign</h2>
+                                <h4>Principles of User Interfase Design</h4>
+                            </div>
+                            <ul class="meta">
+                                <li class="time">14:15 - 16:00</li>
+                                <li class="location">KSH01</li>
+                            </ul>
+                        </header>
+
+                        <ul class="links">
+                            <li><a href="#">Opdrachtomschrijving <span class="deadline">Vrijdag 21 april</span></a></li>
+                            <li><a href="#">Slides Les 1 - Principles of User Interface Design URL</a></li>
+                            <li><a href="#">Les 2 / Principles of user interface design /2 URL</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 
 {% endblock %}

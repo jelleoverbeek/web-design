@@ -1,0 +1,46 @@
+nav {
+    background-color: $brand-primary;
+    color: $white;
+
+    align-items: center;
+    font-weight: 600;
+
+    a {
+        color: $white;
+    }
+
+    img {
+        max-height: rem(48);
+        width: auto;
+    }
+
+    section {
+        height: rem(64);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+        margin-left: rem(16);
+    }
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+
+    li {
+        margin-right: rem(24);
+
+        &.active {
+            opacity: 0.5;
+        }
+    }
+}
