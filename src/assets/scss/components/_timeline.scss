@@ -1,0 +1,39 @@
+@mixin dot() {
+    width: rem(14);
+    height: rem(14);
+    margin-top: rem(4);
+    margin-left: calc(50% - .3rem);
+    border-radius: rem(16);
+}
+
+.timeline-item {
+    display: flex;
+    flex: 1;
+}
+
+.timeline-previous {
+    margin-top: rem(9)
+}
+
+.timeline-item-content {
+    width: 100%;
+    padding-bottom: rem(32);
+}
+
+.timeline-shape {
+    display: flex;
+    width: rem(48);
+    margin-right: rem(24);
+    background: url("../img/line.svg") repeat-y;
+}
+
+.timeline-dot {
+    @include dot();
+    background: $brand-primary;
+}
+
+.timeline-dot-outline {
+    @include dot();
+    background: #F5F5F5;
+    border: 2px solid $brand-primary;
+}

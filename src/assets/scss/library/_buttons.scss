@@ -1,0 +1,24 @@
+button {
+    background: $brand-primary;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.13);
+    border-radius: rem(48);
+    padding: rem(16);
+
+    @include transition();
+
+    &:hover {
+        transform: scale(1.08);
+        //box-shadow: 0 2px 8px 0 rgba(0,0,0,0.13);
+        background: darken($brand-primary, 5%);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.btn-round {
+    padding: 0;
+    width: rem(48);
+    height: rem(48);
+}
