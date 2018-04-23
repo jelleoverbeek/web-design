@@ -28,7 +28,7 @@
         }
 
         &::before {
-            @include beforeIcon(1rem);
+            @include beforeIcon(.5rem);
         }
     }
 
@@ -52,6 +52,7 @@
 
     .deadline {
         margin-left: auto;
+        text-decoration: none;
         &::before {
             @include beforeIcon(0.5rem, 1rem);
             background-image: url("../img/stopwatch-blue.svg");

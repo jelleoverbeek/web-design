@@ -20,6 +20,10 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./build/assets/css'));
 });
 
+gulp.task('fonts', function () {
+    return gulp.src('./src/assets/fonts/**/*')
+        .pipe(gulp.dest('./build/assets/fonts'))
+});
 
 gulp.task('img', function () {
     return gulp.src('./src/assets/img/**/*')
@@ -45,4 +49,4 @@ gulp.task('watch', function () {
     gulp.watch('./src/**/*', ['default']);
 });
 
-gulp.task('default', ['sass', 'js', 'img', 'twig']);
+gulp.task('default', ['sass', 'js', 'img', 'twig', 'fonts']);
