@@ -5,6 +5,7 @@
 html {
     font-family: 'AcuminPro', sans-serif;
     color: $dark-blue;
+    font-size: rem(16);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
@@ -97,6 +98,18 @@ a {
 
     &.active,
     &.disabled {
+    }
+
+    &.icon-link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: rem(24);
+        margin-right: rem(24);
+        height: 32px;
+
+        img {
+            margin-right: rem(8);
+        }
     }
 }
 

@@ -1,0 +1,46 @@
+{% extends "components/_layout.twig" %}
+
+{% set weeklyNerds =
+    [{
+        title: "Advanced Git Tips & Tricks",
+        author: "Titus Wormer",
+        date: "23 april 2018"
+    }, {
+        title: "Browser Bloat",
+        author: "Peter Paul Koch (PPK)",
+        date: "23 april 2018"
+    }, {
+        title: "Justus Sturkenboom",
+        author: "Sketchnotes",
+        date: "23 april 2018"
+    }, {
+        title: "Sketchnotes",
+        author: "Justus Sturkenboom",
+        date: "23 april 2018"
+    }, {
+        title: "Kickoff",
+        author: "Joost & Koop",
+        date: "23 april 2018"
+    }
+] %}
+
+{% block content %}
+
+    <section>
+        <header>
+            <h1>Weekly Nerd</h1>
+        </header>
+
+        {% for weeklyNerd in weeklyNerds %}
+            <article class="card card--weekly-geek">
+                <time>{{ weeklyNerd.date }}</time>
+                <a href="weekly-nerd-detail.html"><h2>{{ weeklyNerd.title }}</h2></a>
+                <h3>{{ weeklyNerd.author }}</h3>
+
+                <a href="weekly-nerd-detail.html" class="icon-link"><img src="assets/img/play.svg">Terugkijken</a>
+                <a href="weekly-nerd-detail.html" class="icon-link"><img src="assets/img/notes.svg">Aantekeningen</a>
+            </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}
