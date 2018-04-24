@@ -1,33 +1,5 @@
 {% extends "components/_layout.twig" %}
 
-{% set notes =
-    [{
-        author: "Koos Bavinck",
-        kudos: 14,
-        items: [
-            "Users needs zijn komen ook voor in de beoordeling.",
-            "Groepjes mag je zelf maken."
-        ]
-    }, {
-        author: "Vienna Meijer",
-        kudos: 13,
-        items: [
-            "Dolor Pellentesque Vulputate Fringilla.",
-            "Cras Fusce Aenean Mattis."
-        ]
-    }, {
-        author: "Victor Zumpolle",
-        kudos: 13,
-        items: ["Ornare Vulputate Risus Fringilla.","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod."]
-    }, {
-        author: "Jelle Overbeek",
-        kudos: 9,
-        items: [
-            "Ornare Vulputate Risus Fringilla.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod."
-        ]
-    }] %}
-
 {% block content %}
 
     <section>
@@ -53,24 +25,8 @@
         <input class="seeker" type="range" min="0" max="99" value="0">
     </section>
 
-    <section>
+    <section class="notes">
         <h1>Slide 4 - 32 notities</h1>
-
-        {% for note in notes %}
-        <article class="note">
-
-            <header class="horizontal-header">
-                <h6>{{ note.author }}</h6>
-                <label class="kudos">{{ note.kudos }} <img src="assets/img/plus.svg"></label>
-            </header>
-
-            <ul>
-                {% for item in note.items %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ul>
-        </article>
-        {% endfor %}
     </section>
 
 

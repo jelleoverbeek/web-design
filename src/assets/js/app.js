@@ -5,7 +5,7 @@
             index: 0,
             img: "assets/img/slide-1.png",
             startTime: 0,
-            endTime: 10,
+            endTime: 6,
             notes: [{
                 author: "Koos Bavinck",
                 kudos: 14,
@@ -35,7 +35,7 @@
         }, {
             index: 1,
             img: "assets/img/slide-2.png",
-            startTime: 10,
+            startTime: 6,
             endTime: 15,
             notes: []
         }, {
@@ -62,12 +62,6 @@
             startTime: 40,
             endTime: 53,
             notes: []
-        }, {
-            index: 6,
-            img: "assets/img/slide-7.png",
-            startTime: 53,
-            endTime: 60,
-            notes: []
         }
     ];
 
@@ -77,13 +71,14 @@
         slideEl: document.querySelector(".presentation__splitscreen .current-slide"),
         slidesEl: document.querySelector(".presentation__slides"),
         seekerEl: document.querySelector(".seeker"),
+        notesEl: document.querySelector(".notes"),
         currentSlideEl: null,
         playing: false,
         slideNodes: [],
         videoDuration: 0,
         interval: null,
         createSlides: function() {
-            slides.forEach( (slide) => {
+            slides.forEach((slide) => {
                 let img = document.createElement("img");
                 img.src = slide.img;
 
@@ -96,6 +91,32 @@
                 this.slideNodes.push(img);
                 this.slidesEl.insertAdjacentElement('beforeend', img)
             });
+        },
+        createNotes: function(slide) {
+            this.notesEl.innerHTML = "";
+            let titleHtml = `<h1>Slide ${slide.index + 1} - ${slide.notes.length} notities</h1>`;
+            this.notesEl.insertAdjacentHTML('beforeend', titleHtml);
+
+            slide.notes.forEach( (note) => {
+
+                let noteList = "";
+
+                note.items.forEach((item) => {
+                    noteList += `<li>${item}</li>`
+                });
+
+                let template =
+                    `<article class="note">
+                        <header class="horizontal-header">
+                            <h6>${note.author}</h6>
+                            <label class="kudos">${note.kudos}<img src="assets/img/plus.svg"></label>
+                        </header>
+                        <ul>${noteList}</ul>
+                    </article>`;
+
+                this.notesEl.insertAdjacentHTML('beforeend', template);
+            });
+
         },
         getSlide: function(currentTime) {
             let currentSlide = null;
@@ -122,6 +143,7 @@
             if(slide) {
                 this.slideEl.src = slide.img;
                 this.setActiveSlide(slide);
+                this.createNotes(slide);
             }
         },
         changeTime: function(time) {
@@ -131,7 +153,6 @@
             this.video.addEventListener('durationchange', (ev) => {
                 this.duration = this.video.duration;
                 this.seekerEl.max = this.duration;
-                console.log(this.seekerEl)
             });
         },
         updateSeeker: function() {
@@ -141,20 +162,24 @@
             const _this = this;
             this.seekerEl.addEventListener("change", function () {
                 _this.changeTime(this.value);
-                _this.setSlide();
+                _this.updatePresentation();
             })
         },
         startInterval: function() {
             const _this = this;
             this.interval = setInterval(function(){
-                _this.setSlide();
-                _this.updateSeeker();
+                _this.updatePresentation();
             }, 1000);
+        },
+        updatePresentation: function() {
+            this.setSlide();
+            this.updateSeeker();
         },
         init: function () {
             this.createSlides();
             this.setSeeker();
             this.handleSeeker();
+            this.updatePresentation();
 
             this.media.addEventListener("click", (ev) => {
                 if(!this.playing) {
