@@ -1,0 +1,82 @@
+{% extends "components/_layout.twig" %}
+
+{% set notes =
+    [{
+        author: "Koos Bavinck",
+        kudos: 14,
+        items: [
+            "Users needs zijn komen ook voor in de beoordeling.",
+            "Groepjes mag je zelf maken."
+        ]
+    }, {
+        author: "Vienna Meijer",
+        kudos: 13,
+        items: [
+            "Dolor Pellentesque Vulputate Fringilla.",
+            "Cras Fusce Aenean Mattis."
+        ]
+    }, {
+        author: "Victor Zumpolle",
+        kudos: 13,
+        items: ["Ornare Vulputate Risus Fringilla.","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod."]
+    }, {
+        author: "Jelle Overbeek",
+        kudos: 9,
+        items: [
+            "Ornare Vulputate Risus Fringilla.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod."
+        ]
+    }] %}
+
+{% block content %}
+
+    <section>
+        <header class="column">
+            <h1>Advanced Git Tips & Tricks</h1>
+            <h2>Titus Wormer</h2>
+        </header>
+    </section>
+
+    <section class="presentation">
+        <div class="presentation__splitscreen">
+            <div class="media paused">
+                <video src="assets/video/talk.mp4"></video>
+            </div>
+            <div class="media paused">
+                <img src="assets/img/slide-1.png">
+            </div>
+
+            <img src="assets/img/play-big.svg" class="play-btn">
+        </div>
+        <div class="presentation__slides">
+            <img src="assets/img/slide-1.png" class="active">
+            <img src="assets/img/slide-2.png">
+            <img src="assets/img/slide-3.png">
+            <img src="assets/img/slide-4.png">
+            <img src="assets/img/slide-5.png">
+            <img src="assets/img/slide-6.png">
+            <img src="assets/img/slide-7.png">
+        </div>
+    </section>
+
+    <section>
+        <h1>Slide 4 - 32 notities</h1>
+
+        {% for note in notes %}
+        <article class="note">
+
+            <header class="horizontal-header">
+                <h6>{{ note.author }}</h6>
+                <label class="kudos">{{ note.kudos }} <img src="assets/img/plus.svg"></label>
+            </header>
+
+            <ul>
+                {% for item in note.items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}

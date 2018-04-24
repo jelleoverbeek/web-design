@@ -30,6 +30,11 @@ gulp.task('img', function () {
         .pipe(gulp.dest('./build/assets/img'))
 });
 
+gulp.task('video', function () {
+    return gulp.src('./src/assets/video/**/*')
+        .pipe(gulp.dest('./build/assets/video'))
+});
+
 gulp.task('js', function () {
     return gulp.src('./src/assets/js/**/*.js')
         .pipe(gulp.dest('./build/assets/js'))
@@ -38,7 +43,8 @@ gulp.task('js', function () {
 gulp.task('twig', function () {
     const files = [
         "./src/views/index.twig",
-        "./src/views/weekly-nerd.twig"
+        "./src/views/weekly-nerd.twig",
+        "./src/views/weekly-nerd-detail.twig"
     ];
 
     return gulp.src(files)
@@ -50,4 +56,4 @@ gulp.task('watch', function () {
     gulp.watch('./src/**/*', ['default']);
 });
 
-gulp.task('default', ['sass', 'js', 'img', 'twig', 'fonts']);
+gulp.task('default', ['sass', 'js', 'img', 'twig', 'fonts', 'video']);
