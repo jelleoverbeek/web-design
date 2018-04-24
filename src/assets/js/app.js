@@ -76,12 +76,26 @@
         video: document.querySelector(".presentation__splitscreen video"),
         slideEl: document.querySelector(".presentation__splitscreen .current-slide"),
         slidesEl: document.querySelector(".presentation__slides"),
+        seekerEl: document.querySelector(".seeker"),
         currentSlideEl: null,
         playing: false,
+        slideNodes: [],
+        videoDuration: 0,
+        interval: null,
         createSlides: function() {
             slides.forEach( (slide) => {
-                this.slidesEl.insertAdjacentHTML('beforeend', `<img class="slide" src="${slide.img}">`)
-            })
+                let img = document.createElement("img");
+                img.src = slide.img;
+
+                img.addEventListener("click", (ev) => {
+                    this.changeTime(slide.startTime);
+                    this.setSlide();
+                    this.updateSeeker();
+                });
+
+                this.slideNodes.push(img);
+                this.slidesEl.insertAdjacentElement('beforeend', img)
+            });
         },
         getSlide: function(currentTime) {
             let currentSlide = null;
@@ -95,15 +109,11 @@
             return currentSlide;
         },
         setActiveSlide: function(slide) {
-            let slides = this.slidesEl.querySelectorAll(".slide");
-            this.currentSlideEl = slides[slide.index];
+            this.slideNodes.forEach(function (slide) {
+                slide.classList.remove("active");
+            });
 
-            if(slide.index > 0) {
-                slides[slide.index - 1].classList.remove("active");
-            }
-
-            console.log(this.currentSlideEl);
-
+            this.currentSlideEl = this.slideNodes[slide.index];
             this.currentSlideEl.classList.add("active");
         },
         setSlide: function() {
@@ -114,29 +124,51 @@
                 this.setActiveSlide(slide);
             }
         },
-        interval: null,
-        init: function () {
+        changeTime: function(time) {
+            this.video.currentTime = time;
+        },
+        setSeeker: function() {
+            this.video.addEventListener('durationchange', (ev) => {
+                this.duration = this.video.duration;
+                this.seekerEl.max = this.duration;
+                console.log(this.seekerEl)
+            });
+        },
+        updateSeeker: function() {
+            this.seekerEl.value = this.video.currentTime;
+        },
+        handleSeeker: function() {
             const _this = this;
-
+            this.seekerEl.addEventListener("change", function () {
+                _this.changeTime(this.value);
+                _this.setSlide();
+            })
+        },
+        startInterval: function() {
+            const _this = this;
+            this.interval = setInterval(function(){
+                _this.setSlide();
+                _this.updateSeeker();
+            }, 1000);
+        },
+        init: function () {
             this.createSlides();
+            this.setSeeker();
+            this.handleSeeker();
 
             this.media.addEventListener("click", (ev) => {
                 if(!this.playing) {
                     this.video.play();
                     this.playing = true;
                     this.media.classList.remove("paused");
+                    this.startInterval();
                 } else {
                     this.video.pause();
                     this.playing = false;
                     this.media.classList.add("paused");
+                    clearInterval(this.interval);
                 }
             });
-
-            this.interval = setInterval(function(){
-                _this.setSlide()
-            }, 1000);
-
-            console.log(this.video);
         }
     };
 
