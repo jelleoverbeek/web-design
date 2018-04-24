@@ -10,12 +10,22 @@
     display: flex;
     padding: rem(72) rem(72) rem(56) rem(72);
 
+    .media, .play-btn {
+        @include transition();
+    }
+
     .media {
         width: 50%;
     }
 
-    .paused {
-        opacity: 0.4;
+    &.paused {
+        .media {
+            opacity: 0.4;
+        }
+
+        .play-btn {
+            opacity: 1;
+        }
     }
 
     .play-btn {
@@ -25,6 +35,7 @@
         right: 0;
         top: 0;
         bottom: 0;
+        opacity: 0;
     }
 }
 
@@ -37,6 +48,9 @@
         max-height: rem(128);
         margin-right: rem(24);
         border-radius: rem(3);
+        border: rem(4) solid transparent;
+
+        @include transition();
 
         &.active {
             border: rem(4) solid $brand-primary;

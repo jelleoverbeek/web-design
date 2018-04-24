@@ -38,25 +38,17 @@
     </section>
 
     <section class="presentation">
-        <div class="presentation__splitscreen">
-            <div class="media paused">
+        <div class="presentation__splitscreen paused">
+            <div class="media">
                 <video src="assets/video/talk.mp4"></video>
             </div>
-            <div class="media paused">
-                <img src="assets/img/slide-1.png">
+            <div class="media">
+                <img src="assets/img/slide-1.png" class="current-slide">
             </div>
 
             <img src="assets/img/play-big.svg" class="play-btn">
         </div>
-        <div class="presentation__slides">
-            <img src="assets/img/slide-1.png" class="active">
-            <img src="assets/img/slide-2.png">
-            <img src="assets/img/slide-3.png">
-            <img src="assets/img/slide-4.png">
-            <img src="assets/img/slide-5.png">
-            <img src="assets/img/slide-6.png">
-            <img src="assets/img/slide-7.png">
-        </div>
+        <div class="presentation__slides"></div>
     </section>
 
     <section>
@@ -79,4 +71,6 @@
         {% endfor %}
     </section>
 
+
+    <script src="assets/js/app.js"></script>
 {% endblock %}
