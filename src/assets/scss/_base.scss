@@ -19,9 +19,14 @@ body {
 h1 {
     font-size: rem(32);
     font-weight: 600;
-    margin-top: rem(48);
     margin-bottom: rem(16);
+
+    .big {
+        font-size: rem(40);
+        margin: rem(8) 0 rem(4) 0;
+    }
 }
+
 
 h2 {
     font-size: rem(28);
@@ -53,6 +58,17 @@ h6 {
     color: $purple;
     opacity: 0.7;
     margin: 0;
+}
+
+.subject {
+    font-size: rem(40);
+    margin: rem(8) 0 rem(4) 0;
+}
+
+.author {
+    font-size: rem(27);
+    font-weight: 500;
+    color: $purple;
 }
 
 p {
@@ -124,6 +140,10 @@ a {
 section {
     max-width: rem(672);
     margin: 0 auto;
+
+    & > h1:first-of-type {
+        margin-top: rem(56);
+    }
 
     & > header, .horizontal-header {
         display: flex;

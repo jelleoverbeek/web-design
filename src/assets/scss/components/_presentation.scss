@@ -60,6 +60,7 @@
         width: rem(64);
         border: 0;
         background: $brand-primary url("../img/pause-big.svg") center center no-repeat;
+        cursor: pointer;
 
         transform: scale(0.90);
         @include transitionCubic(0.24s);
@@ -83,14 +84,6 @@
             border: rem(4) solid $brand-primary;
             transform: scale(1);
         }
-    }
-
-    .slide {
-        height: rem(128);
-        margin-right: rem(24);
-        border-radius: rem(3);
-        border: rem(4) solid transparent;
-        background-size: cover;
     }
 }
 

@@ -1,5 +1,7 @@
 {% extends "components/_layout.twig" %}
 
+{% set title = "Weekly Nerds" %}
+
 {% set weeklyNerds =
     [{
         title: "Advanced Git Tips & Tricks",
@@ -27,15 +29,23 @@
 {% block content %}
 
     <section>
-        <header>
-            <h1>Weekly Nerd</h1>
+        <header class="column">
+            <h1>Weekly Nerds</h1>
+            {#<p><b>Werkwijze en criteria</b></p>#}
+            {#<p>Voor de Weekly Nerd moet je een blog bij houden van de presentaties. Er wordt van je verwacht dat je alle Weekly Nerds bijwoont. Van iedere presentatie maak je sketch notes die je op je blog post. Schrijf daaronder kort een lijstje met (interessante) onderwerpen die aan bod zijn gekomen,</p>#}
+            {#<p>Je mag niet meer dan 1 Weekly Nerd missen. Gebeurt dit wel dan krijg je een vervangende opdracht.</p>#}
+            {#<p>5 keer moet je een uitgebreide blog post schrijven over een relevant onderwerp. Bijvoorbeeld een eigen onderzoek naar een techniek of een (technische) analyse van een website die in een Weekly Nerd is behandeld. Zorg in je blog post voor juiste verwijzingen, bronvermelding en goede leesbare teksten. Engels wordt aangeraden.</p>#}
+            {#<p>Lever je blog met de verslagen en 5 artikelen zo snel mogelijk in na de laatste Weekly Nerd. Je werk moet voor de laatste week van de Meesterproef binnen zijn.</p>#}
+
+            {#<p><b>Herkansing</b></p>#}
+            {#<p>Als je werk onvoldoende is, of als je de deadline niet hebt gehaald is na de Meesterproef tijd gepland voor een herkansing en/of aanvullingen. De herkansing loopt tot en met de week van 9 juli. Op dinsdagmiddag 3 juli kun je afspraken maken met de docenten voor de herkansing.</p>#}
         </header>
 
         {% for weeklyNerd in weeklyNerds %}
             <article class="card card--weekly-geek">
                 <h6>{{ weeklyNerd.date }}</h6>
-                <a href="weekly-nerd-detail.html"><h2>{{ weeklyNerd.title }}</h2></a>
-                <h3>{{ weeklyNerd.author }}</h3>
+                <a href="weekly-nerd-detail.html"><h2 class="subject">{{ weeklyNerd.title }}</h2></a>
+                <h3 class="author">{{ weeklyNerd.author }}</h3>
 
                 <a href="weekly-nerd-detail.html" class="icon-link"><img src="assets/img/play.svg">Terugkijken</a>
                 <a href="weekly-nerd-detail.html" class="icon-link"><img src="assets/img/notes.svg">Aantekeningen</a>

@@ -6,6 +6,12 @@
             img: "assets/img/slide-1.png",
             startTime: 0,
             endTime: 6,
+            notes: []
+        }, {
+            index: 1,
+            img: "assets/img/slide-2.png",
+            startTime: 6,
+            endTime: 15,
             notes: [{
                 author: "Koos Bavinck",
                 kudos: 14,
@@ -20,7 +26,13 @@
                     "Dolor Pellentesque Vulputate Fringilla.",
                     "Cras Fusce Aenean Mattis."
                 ]
-            }, {
+            }]
+        }, {
+            index: 2,
+            img: "assets/img/slide-3.png",
+            startTime: 15,
+            endTime: 21,
+            notes: [{
                 author: "Victor Zumpolle",
                 kudos: 13,
                 items: ["Ornare Vulputate Risus Fringilla.","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod."]
@@ -33,29 +45,35 @@
                 ]
             }]
         }, {
-            index: 1,
-            img: "assets/img/slide-2.png",
-            startTime: 6,
-            endTime: 15,
-            notes: []
-        }, {
-            index: 2,
-            img: "assets/img/slide-3.png",
-            startTime: 15,
-            endTime: 21,
-            notes: []
-        }, {
             index: 3,
             img: "assets/img/slide-4.png",
             startTime: 21,
             endTime: 30,
-            notes: []
+            notes: [{
+                author: "Victor Zumpolle",
+                kudos: 13,
+                items: ["Ornare Vulputate Risus Fringilla.","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod."]
+            }]
         }, {
             index: 4,
             img: "assets/img/slide-5.png",
             startTime: 30,
             endTime: 40,
-            notes: []
+            notes: [{
+                author: "Koos Bavinck",
+                kudos: 14,
+                items: [
+                    "Users needs zijn komen ook voor in de beoordeling.",
+                    "Groepjes mag je zelf maken."
+                ]
+            }, {
+                author: "Vienna Meijer",
+                kudos: 13,
+                items: [
+                    "Dolor Pellentesque Vulputate Fringilla.",
+                    "Cras Fusce Aenean Mattis."
+                ]
+            }]
         }, {
             index: 5,
             img: "assets/img/slide-6.png",
@@ -94,7 +112,7 @@
         },
         createNotes: function(slide) {
             this.notesEl.innerHTML = "";
-            let titleHtml = `<h1>Slide ${slide.index + 1} - ${slide.notes.length} notities</h1>`;
+            let titleHtml = `<h1>Slide ${slide.index + 1} - ${slide.notes.length} aantekeningen</h1>`;
             this.notesEl.insertAdjacentHTML('beforeend', titleHtml);
 
             slide.notes.forEach( (note) => {
@@ -180,6 +198,7 @@
             this.updateSeeker();
         },
         play: function() {
+            location.href = "#presentation";
             this.video.play();
             this.playing = true;
             this.media.classList.remove("paused");

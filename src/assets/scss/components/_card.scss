@@ -2,8 +2,7 @@
     background-color: $white;
     padding: rem(40);
     border-radius: rem(3);
-    margin-top: rem(16);
-    margin-bottom: rem(32);
+    margin: rem(16) auto;
 
     header {
         display: flex;
@@ -18,18 +17,5 @@
         a {
             color: $white;
         }
-    }
-}
-
-.card--weekly-geek {
-    h2 {
-        font-size: rem(40);
-        margin: rem(8) 0 rem(4) 0;
-    }
-
-    h3 {
-        font-size: rem(27);
-        font-weight: 500;
-        color: $purple;
     }
 }

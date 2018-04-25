@@ -2,7 +2,6 @@
 @import "library/fonts";
 @import "library/animations";
 @import "library/variables";
-@import "library/utilities";
 @import "library/mixins";
 @import "library/buttons";
 
@@ -17,3 +16,5 @@
 @import "components/messages";
 @import "components/timeline";
 @import "components/presentation";
+
+@import "library/utilities";

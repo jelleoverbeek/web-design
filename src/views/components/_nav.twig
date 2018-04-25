@@ -1,11 +1,8 @@
 <nav>
     <section>
         <ul class="menu">
-            <li class="active"><a href="index.html">Tijdlijn</a></li>
-            {#<li><a href="#">Vakken</a></li>#}
-            {#<li><a href="#">Roosters</a></li>#}
-            {#<li><a href="#">Klas</a></li>#}
-            <li><a href="weekly-nerd.html">Weekly nerd</a></li>
+            <li {% if title == "Tijdlijn" %} class="active" {% endif %}><a href="index.html">Tijdlijn</a></li>
+            <li {% if title == "Weekly Nerds" %} class="active" {% endif %}><a href="weekly-nerd.html">Weekly Nerds</a></li>
         </ul>
 
         <div class="profile">
