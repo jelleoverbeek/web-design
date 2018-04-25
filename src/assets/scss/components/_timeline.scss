@@ -6,9 +6,23 @@
     border-radius: rem(16);
 }
 
+@keyframes fadein {
+    from {
+        transform: translateY(rem(-64));
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .timeline-item {
     display: flex;
     flex: 1;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 
 .timeline-previous {

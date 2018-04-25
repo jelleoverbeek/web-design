@@ -16,7 +16,9 @@
         }
     };
 
-    timeline.init();
+    if(document.querySelector(".timeline")) {
+        timeline.init();
+    }
 
     const slides = [
         {
