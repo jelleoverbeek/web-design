@@ -60,7 +60,7 @@
             index: 5,
             img: "assets/img/slide-6.png",
             startTime: 40,
-            endTime: 53,
+            endTime: 60,
             notes: []
         }
     ];
@@ -145,6 +145,10 @@
                 this.setActiveSlide(slide);
                 this.createNotes(slide);
             }
+
+            if(this.video.currentTime === this.duration) {
+                this.pause();
+            }
         },
         changeTime: function(time) {
             this.video.currentTime = time;
@@ -175,6 +179,18 @@
             this.setSlide();
             this.updateSeeker();
         },
+        play: function() {
+            this.video.play();
+            this.playing = true;
+            this.media.classList.remove("paused");
+            this.startInterval();
+        },
+        pause: function() {
+            this.video.pause();
+            this.playing = false;
+            this.media.classList.add("paused");
+            clearInterval(this.interval);
+        },
         init: function () {
             this.createSlides();
             this.setSeeker();
@@ -183,15 +199,9 @@
 
             this.media.addEventListener("click", (ev) => {
                 if(!this.playing) {
-                    this.video.play();
-                    this.playing = true;
-                    this.media.classList.remove("paused");
-                    this.startInterval();
+                    this.play();
                 } else {
-                    this.video.pause();
-                    this.playing = false;
-                    this.media.classList.add("paused");
-                    clearInterval(this.interval);
+                    this.pause();
                 }
             });
         }
