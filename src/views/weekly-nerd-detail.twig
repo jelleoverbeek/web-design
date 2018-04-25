@@ -15,23 +15,13 @@
 
     <section class="presentation" id="presentation">
         <div class="presentation__splitscreen paused">
-            <div class="media">
-                <video src="assets/video/talk.mp4"></video>
-            </div>
-            <div class="media">
-                <img src="assets/img/slide-1.png" class="current-slide">
-            </div>
-
+            <div class="media"><video src="assets/video/talk.mp4"></video></div>
+            <div class="media"><img src="assets/img/slide-1.png" class="current-slide"></div>
             <button class="play-btn"></button>
         </div>
         <div class="presentation__slides"></div>
-
         <input class="seeker" type="range" min="0" max="99" value="0">
     </section>
 
-    <section class="notes">
-
-    </section>
-
-    <script src="assets/js/app.js"></script>
+    <section class="notes"></section>
 {% endblock %}

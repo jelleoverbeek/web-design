@@ -89,10 +89,10 @@
         dateName: "Vandaag",
         hidden: false,
         courses: [{
-            title: "Web design",
+            title: "Real-time web",
             assignment: "Principles of User Interfase Design",
             time: "14:15 - 16:00",
-            active: true,
+            active: false,
             location: "KSH01",
             links: [{
                 title: "Weekopdracht",
@@ -100,10 +100,10 @@
                 deadline: "Vrijdag 27 april"
             }]
         }, {
-            title: "Real-time web",
+            title: "Web design",
             assignment: "Hello world",
             time: "14:15 - 16:00",
-            active: false,
+            active: true,
             location: "KSH01",
             links: [{
                 title: "Weekopdracht",
@@ -162,17 +162,15 @@
         <h1>Tijdlijn</h1>
 
         <div class="timeline">
-            <article class="timeline-item">
+            <article class="timeline-item timeline-previous">
                 <div class="timeline-shape">
                     <button class="btn-round">
                         <img src="assets/img/chevron-up.svg">
                     </button>
                 </div>
-                <div class="timeline-item-content timeline-previous">
-                    <a href="#">
-                        Week eerder laden<br>
-                        <small>16 april t/m 20 april</small>
-                    </a>
+                <div class="timeline-item-content">
+                    Dag eerder laden<br>
+                    <small>Dinsdag 24 april</small>
                 </div>
             </article>
 
@@ -207,117 +205,6 @@
                     </div>
                 </article>
             {% endfor %}
-
-            {#<article class="timeline-item hidden">#}
-                {#<div class="timeline-shape">#}
-                    {#<div class="timeline-dot"></div>#}
-                {#</div>#}
-                {#<div class="timeline-item-content">#}
-                    {#<h3>Vrijdag <time>(20 april 2018)</time></h3>#}
-                    {#<div class="card">#}
-                        {#<header>#}
-                            {#<div class="titles">#}
-                                {#<h2>Webdesign</h2>#}
-                                {#<h4>Principles of User Interfase Design</h4>#}
-                            {#</div>#}
-                            {#<ul class="meta">#}
-                                {#<li class="time">14:15 - 16:00</li>#}
-                                {#<li class="location">KSH01</li>#}
-                            {#</ul>#}
-                        {#</header>#}
-
-                        {#<ul class="meta">#}
-                            {#<li class="link"><a href="#">Opdrachtomschrijving <span class="deadline">Vrijdag 20 april</span></a></li>#}
-                        {#</ul>#}
-                    {#</div>#}
-                    {#<div class="card">#}
-                        {#<header>#}
-                            {#<div class="titles">#}
-                                {#<h2>Real-time web</h2>#}
-                                {#<h4>Hello server</h4>#}
-                            {#</div>#}
-                            {#<ul class="meta">#}
-                                {#<li class="time">14:15 - 16:00</li>#}
-                                {#<li class="location">KSH01</li>#}
-                            {#</ul>#}
-                        {#</header>#}
-
-                        {#<ul class="meta">#}
-                            {#<li class="link"><a href="#">Opdrachtomschrijving <span class="deadline">Vrijdag 20 april</span></a></li>#}
-                            {#<li class="calendar"><a href="#">Coaching 13 april</a></li>#}
-                        {#</ul>#}
-                    {#</div>#}
-                {#</div>#}
-            {#</article>#}
-            {# Actual timeline items #}
-            {#<article class="timeline-item">#}
-                {#<div class="timeline-shape">#}
-                    {#<div class="timeline-dot"></div>#}
-                {#</div>#}
-                {#<div class="timeline-item-content">#}
-                    {#<h3>Vandaag <time>(23 april 2018)</time></h3>#}
-                    {#<div class="card active">#}
-                        {#<header>#}
-                            {#<div class="titles">#}
-                                {#<h2>Webdesign</h2>#}
-                                {#<h4>Principles of User Interfase Design</h4>#}
-                            {#</div>#}
-                            {#<ul class="meta">#}
-                                {#<li class="time">14:15 - 16:00</li>#}
-                                {#<li class="location">KSH01</li>#}
-                            {#</ul>#}
-                        {#</header>#}
-
-                        {#<ul class="meta">#}
-                            {#<li class="link"><a href="#">Opdrachtomschrijving <span class="deadline">Vrijdag 27 april</span></a></li>#}
-                            {#<li class="link"><a href="#">Slides Les 1 - Principles of User Interface Design URL</a></li>#}
-                            {#<li class="link"><a href="#">Les 2 / Principles of user interface design /2 URL</a></li>#}
-                        {#</ul>#}
-                    {#</div>#}
-                    {#<div class="card">#}
-                        {#<header>#}
-                            {#<div class="titles">#}
-                                {#<h2>Real-time web</h2>#}
-                                {#<h4>Hello server</h4>#}
-                            {#</div>#}
-                            {#<ul class="meta">#}
-                                {#<li class="time">14:15 - 16:00</li>#}
-                                {#<li class="location">KSH01</li>#}
-                            {#</ul>#}
-                        {#</header>#}
-
-                        {#<ul class="meta">#}
-                            {#<li class="link"><a href="#">Opdrachtomschrijving <span class="deadline">Vrijdag 27 april</span></a></li>#}
-                            {#<li class="calendar"><a href="#">Coaching 13 april</a></li>#}
-                        {#</ul>#}
-                    {#</div>#}
-                {#</div>#}
-            {#</article>#}
-            {#<article class="timeline-item">#}
-                {#<div class="timeline-shape">#}
-                    {#<div class="timeline-dot-outline"></div>#}
-                {#</div>#}
-                {#<div class="timeline-item-content">#}
-                    {#<h3>Morgen <time>(24 april 2018)</time></h3>#}
-                    {#<div class="card">#}
-                        {#<header>#}
-                            {#<div class="titles">#}
-                                {#<h2>Real-time web</h2>#}
-                                {#<h4>Hello server</h4>#}
-                            {#</div>#}
-                            {#<ul class="meta">#}
-                                {#<li class="time">14:15 - 16:00</li>#}
-                                {#<li class="location">KSH01</li>#}
-                            {#</ul>#}
-                        {#</header>#}
-
-                        {#<ul class="meta">#}
-                            {#<li class="link"><a href="#">Opdrachtomschrijving <span class="deadline">Vrijdag 21 april</span></a></li>#}
-                            {#<li class="calendar"><a href="#">Coaching 13 april</a></li>#}
-                        {#</ul>#}
-                    {#</div>#}
-                {#</div>#}
-            {#</article>#}
         </div>
     </section>
 

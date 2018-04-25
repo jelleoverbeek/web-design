@@ -1,5 +1,23 @@
 (function () {
 
+    const timeline = {
+        previousBtn: document.querySelector(".timeline-previous"),
+        hiddenItems: function () {
+            return document.querySelectorAll(".timeline-item.hidden");
+        },
+        showPreviousDay: function() {
+            let hiddenItems = this.hiddenItems();
+            hiddenItems[hiddenItems.length - 1].classList.remove("hidden");
+        },
+        init: function () {
+            this.previousBtn.addEventListener("click", (ev) => {
+                this.showPreviousDay()
+            });
+        }
+    };
+
+    timeline.init();
+
     const slides = [
         {
             index: 0,
@@ -226,6 +244,8 @@
         }
     };
 
-    presentation.init();
+    if(document.querySelector(".presentation")) {
+        presentation.init();
+    }
 
 }());

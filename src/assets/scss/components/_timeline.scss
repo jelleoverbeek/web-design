@@ -12,7 +12,14 @@
 }
 
 .timeline-previous {
-    margin-top: rem(9)
+    .timeline-item-content {
+        margin-top: rem(9);
+        color: $brand-primary;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .timeline-item-content {
