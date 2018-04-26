@@ -53,16 +53,16 @@ De weekly nerds kunnen worden teruggezien in een splitscreen video waarbij de sp
 
 ## Principles
 
-**Direct manipulation is best**
+**Direct manipulation is best**  
 De gebruiker kan interacteren met de presentatie doormiddel van de slide thumbnails en de media items zelf.
 
-**Progressive disclosure**
+**Progressive disclosure**  
 Gebruikers zien alleen wat er op dat moment het meeste toe doet. Het is wel mogelijk om andere data op te halen. 
 
-**Consistency matters**
+**Consistency matters**  
 Kleuren en kopgroottes worden consistent gebruikt.
 
-**Highlight, don't determine, with color**
+**Highlight, don't determine, with color**  
 Kleur wordt gebruikt om elementen er uit te laten springen die extra aandacht vereisen.
 
 ## User scenario's
@@ -79,7 +79,7 @@ Vooraf heb ik een aantal user scenarios gemaakt. Uiteindelijk is er nog maar 1 v
 ## User test
 Mijn twee gebruikers zijn Marie en Vienna.
 
-**Marie**
+**Marie**  
 Marie is doof en voor haar is Nederlands een 2e taal. Ik heb geprobeerd de interface zo to-the-point mogelijk te maken.
 Marie gaf aan dat het lastig is om college's te volgen voor haar. Dit komt doordat ze op de tolk, de presentatie, en de spreker tegelijk moet letten. Daarbij moet ze ook nog aantekeningen maken. Veel dingen te gelijk dus.
 Om dit probleem te verminderen heb ik een pagina gemaakt waarop de Weekly Nerds terug te zien zijn. Zie [Weekly nerds](#Weekly nerds) voor meer hier over.
