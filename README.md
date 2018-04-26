@@ -49,5 +49,5 @@ De weekly geeks kunnen worden teruggezien in een splitscreen video waarbij de sp
 - Visueel duidelijker maken dat er iets veranderd in de notities.
 
 **Voorbeeld**
-<img src="weeklynerd.gif?raw=true" width="200px">
+<img src="weeklynerd.gif?raw=true">
 
