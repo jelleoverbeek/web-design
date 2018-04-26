@@ -79,8 +79,8 @@ Vooraf heb ik een aantal user scenarios gemaakt. Uiteindelijk is er nog maar 1 v
 ## User test
 Mijn twee gebruikers zijn Marie en Vienna.
 
-** Marie **
-Marie is doof en voor haar is Nederlands als een 2e taal. Ik heb geprobeerd de interface zo to-the-point mogelijk te maken.
+**Marie**
+Marie is doof en voor haar is Nederlands een 2e taal. Ik heb geprobeerd de interface zo to-the-point mogelijk te maken.
 Marie gaf aan dat het lastig is om college's te volgen voor haar. Dit komt doordat ze op de tolk, de presentatie, en de spreker tegelijk moet letten. Daarbij moet ze ook nog aantekeningen maken. Veel dingen te gelijk dus.
 Om dit probleem te verminderen heb ik een pagina gemaakt waarop de Weekly Nerds terug te zien zijn. Zie [Weekly nerds](#Weekly nerds) voor meer hier over.
 
