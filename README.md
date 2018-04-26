@@ -75,6 +75,9 @@ Vooraf heb ik een aantal user scenarios gemaakt. Uiteindelijk is er nog maar 1 v
 * ~~Student wil link naar Slack channel en Github pagina duidelijk zien.~~
 * ~~Student wilt geboekte timeslots terugzien in rooster.~~
 
+## Card sorting
+Om content inzichtelijk te maken heb ik gebruikt gemaakt van de techniek card sorting.
+![card sorting](https://d.pr/i/C4XZEf+)
 
 ## User test
 Mijn twee gebruikers zijn Marie en Vienna.
