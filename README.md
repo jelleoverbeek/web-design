@@ -88,3 +88,4 @@ Marie gaf aan dat het lastig is om college's te volgen voor haar. Dit komt doord
 Om dit probleem te verminderen heb ik een pagina gemaakt waarop de Weekly Nerds terug te zien zijn. Zie [Weekly nerds](#Weekly nerds) voor meer hier over.
 
 Uit de user test bleek dat Marie de interface snel begreep. Sommige details (zoals de kleur van het huidige vak) waren niet helemaal duidelijk. Deze bevindingen heb ik opgenomen in de todo's. Marie was verder enthousiast over de oplossing van de weekly geeks. Ze verteld dat dit heel handig kan zijn voor dove mensen. 
+![User test](https://d.pr/i/pwYzKa+)
